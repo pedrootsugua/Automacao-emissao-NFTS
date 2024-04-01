@@ -34,7 +34,7 @@ Cabeca = (
 
 
 ### Extracting data from NF's Details
-Agenda = Wb_Info['Agenda'].astype(str).str.replace('.', '')
+ID_pagamento = Wb_Info['ID_pagamento'].astype(str).str.replace('.', '')
 
 TR_NF = '4'
 
@@ -99,7 +99,9 @@ Info_nf = (
 
 # Extracting rodapé
 Tipo_Registro_RP = '9'
-Wb_Info_Value = str(len(Wb_Info['Agenda'])).zfill(7)
+
+#CRIAR UM COUNT PARA A QTD DE NOTAS EXISTENTES NO TXT
+Wb_Info_Value = str(len(Wb_Info['ID_pagamento'])).zfill(7) #(VERIFICAR) DEVE SER INFORMADO A QTD DE LINHAS(DADOS NFE) QUE EXISTEM NO TIPO 4(LINHAS DE DETALHE)
 
 # formatação valor deduções
 Soma_Valor_Deducoes = float(Wb_Info['Valor_Deducoes'].sum())
