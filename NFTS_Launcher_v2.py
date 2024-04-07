@@ -102,7 +102,7 @@ def formatar_coluna_ccm(df, coluna, novo_nome, comprimento, tipo=None):
     return df
 
 ##################### Coletting all the paths necessary ##############################
-Path = fr'./Dados/NFTS_db.xlsx'
+Path = fr'./data/NFTS_db.xlsx'
 Wb_Tomadora = pd.read_excel(Path, sheet_name='Dados_Tomadora')
 Wb_Info = pd.read_excel(Path, sheet_name='Dados_NF')
 
